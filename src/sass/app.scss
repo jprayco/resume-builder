@@ -34,6 +34,15 @@ span{
     box-sizing: border-box;
   }
 
+  @media only screen and (max-width: 400px) {
+    .a4-page {
+      padding: 2.5mm 5mm;
+    }
+    .img-container{
+      transform: scale(0.5);
+    }
+  }
+
 @media print {
     body * {
       visibility: hidden;

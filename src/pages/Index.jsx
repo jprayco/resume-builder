@@ -252,6 +252,7 @@ function Index() {
           ...prev,
           img: reader.result, // base64 image string
         }));
+        setHeader(true)
       };
       reader.readAsDataURL(file);
     }
@@ -280,7 +281,7 @@ function Index() {
   };
 
   return (
-    <div className="p-5 ">
+    <div className="p-lg-5 p-md-5 p-sm-1 p-1">
       <h1 className="fw-bold">Simple Resume Builder</h1>
       <p className="fs-4 text-secondary">
         Create your resume in just a minutes!
@@ -295,7 +296,7 @@ function Index() {
           <div className="bg-white p-3">{renderSection()}</div>
         </div>
         <div className="col-lg-8 col-md-12 col-sm-12 p-0 m-0 ">
-          <div className="d-flex justify-content-center px-lg-3 px-md-0 px-sm-0 px-0  m-lg-0 m-md-3 m-sm-3 m-3">
+          <div className="d-flex justify-content-center px-lg-3 px-md-0 px-sm-0 px-0  m-lg-0 m-md-3 m-sm-3 m-2  ">
             <div className="a4-page " ref={printRef}>
               {header ? <PrintHeader headers={headers} /> : ""}
               {objectives ? <PrintObjective objective={objective} /> : ""}
