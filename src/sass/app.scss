@@ -1,0 +1,61 @@
+@import 'bootstrap/scss/bootstrap';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.nav-text{
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+}
+
+body{
+    background-color: #F8F9FA;
+}
+
+
+span{
+    cursor: pointer;
+}
+
+.img-container{
+    height: 5.08cm;
+    width: 5.08cm;
+    display: flex;
+    align-items: end;
+}
+.fs-05{
+    font-size: 7px;
+}
+
+.a4-page {
+    width: 210mm;
+  min-height: 1123px; 
+    background: white;
+    padding: 10mm 20mm;
+    box-sizing: border-box;
+  }
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    .a4-page, .a4-page * {
+      visibility: visible;
+    }
+    .a4-page {
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0 auto !important;
+      page-break-after: always;
+    }
+
+    @page {
+        margin: 10mm;
+      }
+    
+    body {
+    margin: 0 !important;
+    padding: 0 !important;
+    }
+      
+  }
